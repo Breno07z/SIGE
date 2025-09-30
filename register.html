@@ -1,0 +1,104 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100 slide-in">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">
+      Cadastro de Empresa e Usuário
+    </h2>
+    <form id="registerForm" class="space-y-4">
+      <div>
+        <label for="companyName" class="block text-sm font-medium text-gray-700"
+          >Nome da Empresa</label
+        >
+        <input
+          type="text"
+          id="companyName"
+          name="companyName"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          required
+        />
+      </div>
+      <div>
+        <label for="cnpj" class="block text-sm font-medium text-gray-700"
+          >CNPJ</label
+        >
+        <input
+          type="text"
+          id="cnpj"
+          name="cnpj"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="companyEmail"
+          class="block text-sm font-medium text-gray-700"
+          >E-mail da Empresa</label
+        >
+        <input
+          type="email"
+          id="companyEmail"
+          name="companyEmail"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          required
+        />
+      </div>
+      <div>
+        <label for="userEmail" class="block text-sm font-medium text-gray-700"
+          >Seu E-mail (Login)</label
+        >
+        <input
+          type="email"
+          id="userEmail"
+          name="userEmail"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          required
+        />
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700"
+          >Senha</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          required
+        />
+        <p class="text-xs text-gray-500 mt-1">
+          A senha deve ter no mínimo 8 dígitos, incluir caracter especial, letra
+          maiúscula, letra minúscula e número.
+        </p>
+      </div>
+      <div>
+        <label
+          for="confirmPassword"
+          class="block text-sm font-medium text-gray-700"
+          >Confirmar Senha</label
+        >
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 btn-animated"
+      >
+        Cadastrar
+      </button>
+      <p class="mt-4 text-center text-sm text-gray-600">
+        Já tem uma conta?
+        <a
+          href="#"
+          id="loginLink"
+          class="font-medium text-blue-600 hover:text-blue-500"
+          >Faça Login</a
+        >
+      </p>
+    </form>
+  </div>
+</div>
