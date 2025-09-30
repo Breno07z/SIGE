@@ -8,18 +8,28 @@ Este projeto foi construído com foco na performance e na simplicidade de manute
 
 Tecnologia	Finalidade
 HTML5	Estruturação semântica de todo o conteúdo.
-Tailwind CSS	Framework utility-first para design responsivo e rápido.
+Tailwind CSS	Framework utility-first para design responsivo e rápido, garantindo ótima visualização em dispositivos móveis e desktop.
 JavaScript (Puro)	Lógica de negócio, manipulação do DOM e controle de dados.
 
 Exportar para as Planilhas
 🔑 Principais Funcionalidades
 O SIGE é estruturado em módulos essenciais para o controle empresarial:
 
+Dashboard de Visualização:
+
+Tela Inicial com Dashboard para o usuário visualizar rapidamente os principais indicadores:
+
+Resumo do Fluxo de Caixa.
+
+Status de Estoque.
+
+Ordens de Serviço (OS) em aberto.
+
 Segurança (Mock):
 
 Login e Cadastro de usuários.
 
-Implementação de lógica de criptografia simulada/segura em JS para senhas (foco na segurança do front-end e lógica de autenticação).
+Implementação de lógica de criptografia simulada/segura em JS para senhas.
 
 Controladoria Core:
 
@@ -38,3 +48,14 @@ Operacional:
 Criação e acompanhamento de Ordem de Serviço (OS).
 
 Geração de Termos e OS prontos para impressão/visualização.
+
+📱 Responsividade
+O design foi otimizado utilizando Tailwind CSS para ser totalmente responsivo, adaptando-se perfeitamente a:
+
+Smartphones
+
+Tablets
+
+Desktops
+
+🌐 Como Rodar o 
