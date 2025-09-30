@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MsTech Controladoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Meta Tags para SEO -->
+    <meta
+      name="description"
+      content="MsTech Controladoria: Gerencie suas finanças, produtos, clientes, serviços e ordens de serviço de forma eficiente."
+    />
+    <meta
+      name="keywords"
+      content="controladoria, finanças, gestão empresarial, produtos, clientes, serviços, ordens de serviço, dashboard, sistema de gestão"
+    />
+    <meta name="author" content="MsTech" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="[URL_DO_SEU_SITE]" />
+    <meta
+      property="og:title"
+      content="MsTech Controladoria - Sua Gestão Financeira e Empresarial"
+    />
+    <meta
+      property="og:description"
+      content="Gerencie suas finanças, produtos, clientes, serviços e ordens de serviço de forma eficiente com MsTech Controladoria."
+    />
+    <meta property="og:image" content="[URL_DA_IMAGEM_DE_PREVISUALIZACAO]" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="[URL_DO_SEU_SITE]" />
+    <meta
+      property="twitter:title"
+      content="MsTech Controladoria - Sua Gestão Financeira e Empresarial"
+    />
+    <meta
+      property="twitter:description"
+      content="Gerencie suas finanças, produtos, clientes, serviços e ordens de serviço de forma eficiente com MsTech Controladoria."
+    />
+    <meta
+      property="twitter:image"
+      content="[URL_DA_IMAGEM_DE_PREVISUALIZACAO]"
+    />
+  </head>
+
+  <body class="flex min-h-screen bg-gray-100">
+    <!-- Menu Hambúrguer para Mobile -->
+    <div
+      id="hamburgerButton"
+      class="md:hidden p-4 fixed top-0 left-0 z-40 cursor-pointer"
+    >
+      <svg
+        class="w-6 h-6 text-gray-800"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-4 6h4"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-200 ease-in-out w-64 bg-gray-600 text-white flex flex-col p-4 z-30"
+    >
+      <h1 class="text-xl font-bold mb-6 text-center">MsTech Controle</h1>
+      <nav class="flex flex-col space-y-2">
+        <button
+          id="dashboardBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          📊 Dashboard
+        </button>
+        <button
+          id="productsBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          📦 Produtos
+        </button>
+        <button
+          id="clientsBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          👥 Clientes
+        </button>
+        <button
+          id="servicesBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          🛠️ Serviços
+        </button>
+        <button
+          id="ordersBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          📑 Ordem de Serviço
+        </button>
+        <button
+          id="termsBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          📜 Termos
+        </button>
+        <button
+          id="financialBtn"
+          class="hover:bg-blue-500 p-2 rounded transition-colors"
+        >
+          💰 Financeiro
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Novo ícone de perfil no canto superior direito -->
+    <div
+      id="profileIconContainer"
+      class="absolute top-4 right-4 z-40 cursor-pointer hidden"
+    >
+      <img
+        id="profilePicture"
+        src="https://via.placeholder.com/40"
+        alt="Perfil do Usuário"
+        class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-md"
+      />
+    </div>
+
+    <!-- Overlay para dispositivos móveis -->
+    <div
+      id="sidebarOverlay"
+      class="fixed inset-0 bg-black opacity-50 z-20 hidden md:hidden"
+    ></div>
+
+    <!-- Conteúdo -->
+    <main id="content" class="flex-1 p-6 md:ml-0 mt-16 md:mt-0">
+      <!-- Conteúdo será carregado aqui -->
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div
+        id="modalContent"
+        class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mx-4"
+      >
+        <!-- Conteúdo do modal será carregado aqui -->
+      </div>
+    </div>
+
+    <!-- Custom Message Modal -->
+    <div
+      id="customMessageModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div
+        id="customMessageContent"
+        class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full mx-4 flex flex-col items-center justify-center"
+      >
+        <div id="messageIcon" class="text-4xl mb-4"></div>
+        <p id="messageText" class="text-lg text-gray-800 text-center"></p>
+        <button
+          id="closeMessageButton"
+          class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hidden"
+        >
+          Fechar
+        </button>
+      </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
