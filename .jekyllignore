@@ -1,0 +1,16 @@
+backend/
+backend/**
+node_modules/
+**/node_modules/**
+*.map
+*.log
+*.db
+package.json
+package-lock.json
+backend/package.json
+backend/package-lock.json
+Gemfile
+Gemfile.lock
+.env
+.env.*
+

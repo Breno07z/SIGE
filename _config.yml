@@ -1,0 +1,33 @@
+theme: jekyll-theme-primer
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Excluir backend e dependências do build do Pages
+exclude:
+  - backend/
+  - backend/**
+  - node_modules/
+  - **/node_modules/**
+  - package.json
+  - package-lock.json
+  - backend/package.json
+  - backend/package-lock.json
+  - mstech.db
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+
+relative_links:
+  enabled: true
+  collections: true
+
+permalink: pretty
+
+
