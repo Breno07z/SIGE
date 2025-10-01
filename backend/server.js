@@ -3,7 +3,7 @@ const cors = require("cors")
 const sqlite3 = require("sqlite3").verbose()
 const bcrypt = require("bcryptjs")
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 const db = require("./database") // Importa o arquivo do banco de dados para inicializá-lo
 const path = require("path")
@@ -11,7 +11,13 @@ const nodemailer = require("nodemailer") // Importa Nodemailer
 const crypto = require("crypto") // Importa o módulo crypto para gerar tokens
 
 app.use(express.json()) // Para parsear o corpo das requisições JSON
-app.use(cors()) // Habilita o CORS para permitir requisições do frontend
+// Permitir requisições do frontend (ajuste a origem em produção se quiser restringir)
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://breno07z.github.io/SIGE"
+app.use(
+  cors({
+    origin: FRONTEND_URL === "*" ? true : FRONTEND_URL,
+  })
+)
 
 // Configuração do Nodemailer com Ethereal Mail
 let transporter
@@ -182,7 +188,7 @@ app.post("/forgot-password", (req, res) => {
         }
 
         // O link de redefinição apontará para uma nova página HTML no frontend
-        const resetUrl = `http://localhost:8080/reset-password.html?token=${token}` // Assumindo que o frontend roda na porta 8080 ou outra
+        const resetUrl = `${FRONTEND_URL}/reset-password.html?token=${token}`
 
         const mailOptions = {
           to: user.email,
