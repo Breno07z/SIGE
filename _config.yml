@@ -11,9 +11,9 @@ plugins:
 # Excluir backend e dependências do build do Pages
 exclude:
   - backend/
-  - backend/**
+  - "backend/**"
   - node_modules/
-  - **/node_modules/**
+  - "**/node_modules/**"
   - package.json
   - package-lock.json
   - backend/package.json
