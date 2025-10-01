@@ -5,9 +5,9 @@ import {
   clearUserData,
 } from "./utils.js"
 import { loadPage, showCustomMessage, showLoading, hideLoading } from "./ui.js"
-import { loadDashboard } from "./dashboard.js" // Será criado em breve
+import { loadDashboard } from "./dashboard.js" 
 import { loadProfilePage } from "./profile.js"
-import { handleEditTerms } from "./terms.js" // Será criado em breve
+import { handleEditTerms } from "./terms.js" 
 
 // Função para anexar o listener do formulário de cadastro
 export function attachRegisterFormListener() {
