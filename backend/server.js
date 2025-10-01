@@ -1327,6 +1327,11 @@ app.put("/terms/:companyId", (req, res) => {
 // Servir arquivos estáticos do diretório raiz do projeto (movido para o final)
 app.use(express.static(path.join(__dirname, "..")))
 
+// Health check para provedores (Render)
+app.get("/", (_req, res) => {
+  res.status(200).send("OK")
+})
+
 app.listen(port, () => {
   console.log(`Backend rodando em http://localhost:${port}`)
 })

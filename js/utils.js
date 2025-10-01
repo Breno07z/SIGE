@@ -1,4 +1,4 @@
-export const BACKEND_URL = "http://localhost:3000" // URL do seu backend Node.js
+export const BACKEND_URL = "https://sige.onrender.com" // URL pública do backend em produção
 
 export let systemData = {
   loggedInUser: JSON.parse(localStorage.getItem("loggedInUser")) || null,
